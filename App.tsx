@@ -1,20 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, Stack, TamaguiProvider, Text, View } from 'tamagui';
+import appConfig from './tamagui.config';
+import React from 'react';
+import { LogBox } from 'react-native';
+
+LogBox.ignoreAllLogs();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <TamaguiProvider config={appConfig}>
       <StatusBar style="auto" />
-    </View>
+      <View f={1} bg='$background' ai='center' jc='center'>
+        <Text>Open up App.tsx to start working on your app!</Text>
+        <Button theme='blue' mt='$2' size='$5'>
+          Test Theme Press, mt='$3' size='$5'
+        </Button>
+
+        <Stack pressStyle={{opacity: 0.5}} marginTop="$2" p="$3" bg="pink">
+          <Text>Stack marginTop="$2" p="$3" bg="pink"</Text>
+        </Stack>
+
+        <View marginTop="$2" p="$3" bg="pink">
+          <Text>View marginTop="$2" p="$3" bg="pink"</Text>
+        </View>
+      </View>
+    </TamaguiProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
