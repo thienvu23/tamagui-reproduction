@@ -1,7 +1,7 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Button, Stack, TamaguiProvider, Text, View } from 'tamagui';
 import appConfig from './tamagui.config';
-import React from 'react';
 import { LogBox } from 'react-native';
 
 LogBox.ignoreAllLogs();

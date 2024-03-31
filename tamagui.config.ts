@@ -1,6 +1,6 @@
 import { createTamagui } from "tamagui";
 
-import { config } from "@tamagui/config/v2-native";
+import { config } from "@tamagui/config/v3";
 import { tokens } from "./tokens";
 
 // CREATE TAMAGUI CONFIG
