@@ -1,6 +1,7 @@
 import { ms, vs } from "react-native-size-matters";
 /* eslint-disable @typescript-eslint/no-shadow */
 import { createTokens } from "tamagui";
+import { config } from "@tamagui/config/v2-native";
 
 export const size = {
   $0: 0,
@@ -34,36 +35,6 @@ export const size = {
   $18: ms(244),
   $19: ms(264),
   $20: ms(284),
-
-  // Height
-  "$h0.25": vs(2),
-  "$h0.5": vs(4),
-  "$h0.75": vs(8),
-  $h1: vs(20),
-  "$h1.5": vs(24),
-  $h2: vs(28),
-  "$h2.5": vs(32),
-  $h3: vs(36),
-  "$h3.5": vs(40),
-  $h4: vs(44),
-  $htrue: vs(44),
-  "$h4.5": vs(48),
-  $h5: vs(52),
-  $h6: vs(64),
-  $h7: vs(74),
-  $h8: vs(84),
-  $h9: vs(94),
-  $h10: vs(104),
-  $h11: vs(124),
-  $h12: vs(144),
-  $h13: vs(164),
-  $h14: vs(184),
-  $h15: vs(204),
-  $h16: vs(224),
-  $h17: vs(224),
-  $h18: vs(244),
-  $h19: vs(264),
-  $h20: vs(284),
 };
 
 type SizeKeysIn = keyof typeof size;
@@ -138,6 +109,6 @@ export const tokens = createTokens({
   size,
   space,
   zIndex,
-  color: {},
+  color: config.tokens.color,
   radius,
 });

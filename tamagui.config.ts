@@ -5,8 +5,11 @@ import { tokens } from "./tokens";
 
 // CREATE TAMAGUI CONFIG
 const appConfig = createTamagui({
-  ...config,
+  ...config, 
   tokens,
+  settings: {
+    allowedStyleValues: true,
+  },
 });
 
 type AppConfig = typeof appConfig;

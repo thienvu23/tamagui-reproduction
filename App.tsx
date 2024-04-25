@@ -12,12 +12,12 @@ export default function App() {
       <StatusBar style="auto" />
       <View f={1} bg='$background' ai='center' jc='center'>
         <Text>Open up App.tsx to start working on your app!</Text>
-        <Button theme='blue' mt='$2' size='$5'>
-          Test Theme Press, mt='$3' size='$5'
+        <Button pressTheme theme='blue' mt='$2' size='$5'>
+          Test Theme Press, mt='$3' size='$5' pressTheme
         </Button>
 
         <Stack pressStyle={{opacity: 0.5}} marginTop="$2" p="$3" bg="pink">
-          <Text>Stack marginTop="$2" p="$3" bg="pink"</Text>
+          <Text>Stack marginTop="$2" p="$3" bg="pink" {`pressStyle={{opacity: 0.5}}`}</Text>
         </Stack>
 
         <View marginTop="$2" p="$3" bg="pink">
