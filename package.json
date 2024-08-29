@@ -7,6 +7,7 @@
     "upgrade:tamagui:canary": "yarn up '*tamagui*'@canary '@tamagui/*'@canary",
     "start": "npx expo start -c",
     "android": "npx expo start --android",
+    "android:local-build": " eas build --profile preview --platform android --local",
     "ios": "npx expo start --ios",
     "web": "npx expo start --web",
     "test": "jest --watchAll"

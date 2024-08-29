@@ -6,7 +6,7 @@ module.exports = (api) => {
   return {
     presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
     plugins: [
-      "module:react-native-dotenv",
+      // "module:react-native-dotenv",
       [
         '@tamagui/babel-plugin',
         {
